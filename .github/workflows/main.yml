@@ -13,9 +13,11 @@ jobs:
           git config --global user.email "mqh07112008@gmail.com"
       - name: Huy
         run: |
-          for ((i=0; i<=1000000; i++)); do
+          while true; do
+            for ((i=0; i<=10000000; i++)); do
               echo $i > Huy.txt
               git add .
               git commit -m "By HuyPro"
               git push
+            done
           done
